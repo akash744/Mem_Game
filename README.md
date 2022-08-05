@@ -87,4 +87,4 @@ Select the right edition of VS Code for your device from https://code.visualstud
 
 2. Install Flutter Extension
 
-<img src="./readme/10.gif)
+<img src="./readme/10.gif" width=50% height=50%>
