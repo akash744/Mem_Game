@@ -3,40 +3,53 @@
 ## Flutter Installation
 
 ### MacOS
-*Coming soon*
+
+#### Customised Way
+The lazy way may not apply to you if you wish to do some customisation of the installation process such as you wish to use `flutter` as a global command.
+
+Please visit https://docs.flutter.dev/get-started/install/macos for more information.
+
 ### Windows
 
-1 Download the flutter SDK from https://docs.flutter.dev/get-started/install/windows and unzip it
+**Step 1**
 
-![](./readme/1.JPG)
+ Download the flutter SDK from https://docs.flutter.dev/get-started/install/windows and unzip it
 
-![](./readme/2.JPG)
+<img src="./readme/1.JPG" width=50% height=50%>
 
-2 Add Flutter to the PATH environment variable
+Here I got it under `D:\DEVS`
+
+<img src="./readme/2.JPG" width=50% height=50%>
+
+**Step 2**
+
+Add Flutter to the PATH environment variable
 
 From the Start search bar (Shortcut: `win` + `s`), enter ‘env’ and select Edit environment variables for your account.
 
-![](./readme/3.PNG)
+<img src="./readme/3.jpg" width=50% height=50%>
 
 Under User variables check if there is an entry called Path.
 
 - If the entry exists, you can follow the instructions and add the full path of **flutter\bin** in the pop up `Edit environment variable` window.
 
-![](./readme/4.PNG)
+<img src="./readme/4.jpg" width=50% height=50%>
 
 - Or after clicking `Edit`, the **Edit User Variable** window pops up, then you append the full path to **flutter\bin** using `;` as a separator from existing values.
 
-![](./readme/5.PNG)
+<img src="./readme/5.jpg" width=50% height=50%>
 
 - Or if the entry does not exist, you can click on `New..` and create the new entry.
 
-![](./readme/5_1.PNG)
+<img src="./readme/5_1.jpg" width=50% height=50%>
 
 ***Trick*** - the full path of **flutter\bin** can be copy from the address bar in the File Explorer
 
-![](./readme/6.gif)
+<img src="./readme/6.gif" width=50% height=50%>
 
-3 Check if adding successfully
+**Step 3**
+
+Check if adding successfully
 
 If you have configured it successfully, by typing 
 ```bash
@@ -44,13 +57,13 @@ flutter --version
 ```
 in the command prompt, you should be able to see the version information of flutter
 
-![](./readme/7.PNG)
+<img src="./readme/7.jpg" width=50% height=50%>
 
 > Q: What if I did not configure it successfully?
 
 Say there is something went wrong in your path and something like this shows up.
 
-![](./readme/8.PNG)
+<img src="./readme/8.jpg" width=50% height=50%>
 
 Well, imagine you might already felt tired with the path configuration process. It is equivalent to use the full path of `flutter.bat` as a command directly in the command prompt. In my case,
 
@@ -63,15 +76,15 @@ is the same assets
 flutter --version
 ```
  
-![](./readme/9.PNG)
+<img src="./readme/9.jpg" width=50% height=50%>
 
 ## VS Code Configuration
 
 1 Install Visual Studio Code
 Select the right edition of VS Code for your device from https://code.visualstudio.com/
 
-![](./readme/11.PNG)
+<img src="./readme/11.jpg" width=50% height=50%>
 
 2. Install Flutter Extension
 
-![](./readme/10.gif)
+<img src="./readme/10.gif)
