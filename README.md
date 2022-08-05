@@ -3,7 +3,31 @@
 ## Flutter Installation
 
 ### MacOS
-*Coming soon*
+
+#### Lazy way
+The lazy way of installing flutter is to use the `mac_config` script inside of this repo.
+
+```sh
+export PATH="$PATH:`pwd`/flutter/bin"
+```
+
+The script basically does 3 things.
+1. Download the zip of Flutter SDK
+2. Unzip it to the current directory
+3. Add the SDK bin directory to the $PATH variable
+
+To run it, you need to first give an executable permission
+```sh
+chmod +x ./mac_config.sh
+```
+
+Then you can run the script
+```sh
+sh ./mac_config.sh
+```
+
+Notice this way sets your PATH variable for the current terminal window only, please look at the ***Customised Way*** for global `flutter` command usage. Everytime you restart the terminal you need to retype the following command again.
+
 ### Windows
 
 1 Download the flutter SDK from https://docs.flutter.dev/get-started/install/windows and unzip it
