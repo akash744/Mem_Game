@@ -10,9 +10,9 @@ The lazy way may not apply to you if you wish to do some customisation of the in
 Please visit https://docs.flutter.dev/get-started/install/macos for more information.
 
 #### Lazy way
-The lazy way of installing flutter is to use the `mac_config` script inside of this repo.
+The lazy way of installing flutter is to use the `mac_config.sh` script inside of this repo.
 
-```sh
+```bash
 export PATH="$PATH:`pwd`/flutter/bin"
 ```
 
@@ -22,12 +22,12 @@ The script basically does 3 things.
 3. Add the SDK bin directory to the $PATH variable
 
 To run it, you need to first give an executable permission
-```sh
+```bash
 chmod +x ./mac_config.sh
 ```
 
 Then you can run the script
-```sh
+```bash
 sh ./mac_config.sh
 ```
 
