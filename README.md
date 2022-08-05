@@ -8,7 +8,7 @@
 The lazy way may not apply to you if you wish to do some customisation of the installation process such as you wish to use `flutter` as a global command.
 
 Please visit https://docs.flutter.dev/get-started/install/macos for more information.
-=======
+
 #### Lazy way
 The lazy way of installing flutter is to use the `mac_config` script inside of this repo.
 
