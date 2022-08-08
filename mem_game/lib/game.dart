@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
 class Game {
+  List<bool> isCardFlipped = [];
 
-  List<String>? cardImgList;
-  final String questionCardPath = "assets/images/hidden.png";
-  List<String> memCardsList = [
+  String questionCardPath = "assets/images/hidden.png";
+
+  List<String> cardPaths = [
     "assets/images/beer.png",
     "assets/images/beer.png",
     "assets/images/burger.png",
@@ -22,14 +23,11 @@ class Game {
     "assets/images/popcorn.png",
     "assets/images/popcorn.png",
   ];
-  
-  final int cardCount = 16;
-  List<Map<int, String>> pairCheck = [];
+
+  Set<int> selectedCards = {};
 
   void initGame() {
-    cardImgList = List.generate(cardCount, (index) => questionCardPath);
-    memCardsList.shuffle();
+    isCardFlipped = List.filled(16, false);
+    cardPaths.shuffle();
   }
 }
-
-

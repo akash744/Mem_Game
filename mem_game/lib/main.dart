@@ -66,7 +66,7 @@ class _HomeScreenState extends State<HomeScreen> {
               child: AspectRatio(
                 aspectRatio: 9 / 10,
                 child: GridView.builder(
-                    itemCount: game.cardImgList!.length,
+                    itemCount: game.cardPaths.length,
                     gridDelegate:
                         const SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 4,
@@ -79,30 +79,34 @@ class _HomeScreenState extends State<HomeScreen> {
                         onTap: () {
                           setState(() {
                             turns += 1;
-                            game.cardImgList![index] = game.memCardsList[index];
-                            game.pairCheck
-                                .add({index: game.memCardsList[index]});
+                            game.selectedCards.add(index);
                           });
-                          if (game.pairCheck.length == 2) {
-                            if (game.pairCheck[0].values.first ==
-                                    game.pairCheck[1].values.first &&
-                                game.pairCheck[0].keys.first !=
-                                    game.pairCheck[1].keys.first) {
+
+                          // Player selected two cards
+                          if (game.selectedCards.length == 2) {
+                            int firstCard = game.selectedCards.elementAt(0);
+                            int secondCard = game.selectedCards.elementAt(1);
+
+                            if (game.cardPaths[firstCard] ==
+                                game.cardPaths[secondCard]) {
+                              // The two cards match!
+
+                              game.isCardFlipped[firstCard] = true;
+                              game.isCardFlipped[secondCard] = true;
                               pairsFound += 1;
-                              game.pairCheck.clear();
+
                               if (pairsFound == 8) {
                                 game.initGame();
                                 pairsFound = 0;
                                 turns = 0;
                               }
+
+                              game.selectedCards.clear();
                             } else {
-                              Future.delayed(Duration(milliseconds: 250), () {
+                              Future.delayed(const Duration(milliseconds: 250),
+                                  () {
                                 setState(() {
-                                  game.cardImgList![game.pairCheck[0].keys
-                                      .first] = game.questionCardPath;
-                                  game.cardImgList![game.pairCheck[1].keys
-                                      .first] = game.questionCardPath;
-                                  game.pairCheck.clear();
+                                  game.selectedCards.clear();
                                 });
                               });
                             }
@@ -114,7 +118,14 @@ class _HomeScreenState extends State<HomeScreen> {
                             color: Color(0xFF99B2DD),
                             borderRadius: BorderRadius.circular(12.0),
                             image: DecorationImage(
-                              image: AssetImage(game.cardImgList![index]),
+                              image: AssetImage((() {
+                                if (game.isCardFlipped[index] == true ||
+                                    game.selectedCards.contains(index)) {
+                                  return game.cardPaths[index];
+                                } else {
+                                  return game.questionCardPath;
+                                }
+                              })()),
                               fit: BoxFit.cover,
                             ),
                           ),
