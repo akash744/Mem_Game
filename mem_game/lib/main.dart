@@ -85,7 +85,9 @@ class _HomeScreenState extends State<HomeScreen> {
                           });
                           if (game.pairCheck.length == 2) {
                             if (game.pairCheck[0].values.first ==
-                                game.pairCheck[1].values.first) {
+                                    game.pairCheck[1].values.first &&
+                                game.pairCheck[0].keys.first !=
+                                    game.pairCheck[1].keys.first) {
                               pairsFound += 1;
                               game.pairCheck.clear();
                               if (pairsFound == 8) {
