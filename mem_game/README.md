@@ -1,16 +1,56 @@
 # mem_game
 
-A new Flutter project.
+A Flutter project.
 
-## Getting Started
+## Resources 
 
-This project is a starting point for a Flutter application.
+### Download the Font Files
 
-A few resources to get you started if this is your first Flutter project:
+Grab the font files from https://drive.google.com/file/d/1BVvL149gPGjIWf3pv961Fk6xb46to7FI/view?usp=sharing 
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+##### Code for pubspec.yaml
+```yaml
+  fonts:
+    - family: Pacifico
+      fonts:
+        - asset: fonts/Pacifico-Regular.ttf
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+
+
+### Download the assets files
+
+Grab the asset files from https://drive.google.com/file/d/1A8aFJsWLo_SidCiF1_2n1ZQ1ecvQLNgw/view?usp=sharing 
+
+
+##### Code for pubspec.yaml
+```yaml
+  assets:
+    - assets/images/
+```
+
+
+##### Code for Game Class
+
+```dart
+  List<String> memCardsList = [
+    "assets/images/beer.png",
+    "assets/images/beer.png",
+    "assets/images/burger.png",
+    "assets/images/burger.png",
+    "assets/images/cupcake.png",
+    "assets/images/cupcake.png",
+    "assets/images/donut.png",
+    "assets/images/donut.png",
+    "assets/images/fries.png",
+    "assets/images/fries.png",
+    "assets/images/icecream.png",
+    "assets/images/icecream.png",
+    "assets/images/pizza.png",
+    "assets/images/pizza.png",
+    "assets/images/popcorn.png",
+    "assets/images/popcorn.png",
+  ];
+```
+
