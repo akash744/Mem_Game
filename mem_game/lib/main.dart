@@ -27,7 +27,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  Game _game = Game();
+  Game game = Game();
 
   int turns = 0;
   int pairsFound = 0;
@@ -35,7 +35,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     super.initState();
-    _game.initGame();
+    game.initGame();
   }
 
   @override
@@ -66,7 +66,7 @@ class _HomeScreenState extends State<HomeScreen> {
               child: AspectRatio(
                 aspectRatio: 9 / 10,
                 child: GridView.builder(
-                    itemCount: _game.cardImgList!.length,
+                    itemCount: game.cardImgList!.length,
                     gridDelegate:
                         const SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 4,
@@ -77,36 +77,30 @@ class _HomeScreenState extends State<HomeScreen> {
                     itemBuilder: (context, index) {
                       return GestureDetector(
                         onTap: () {
-                          //print(_game.pairCheck);
                           setState(() {
                             turns += 1;
-                            _game.cardImgList![index] =
-                                _game.memCardsList[index];
-                            _game.pairCheck
-                                .add({index: _game.memCardsList[index]});
-                            //print(_game.pairCheck.first);
+                            game.cardImgList![index] = game.memCardsList[index];
+                            game.pairCheck
+                                .add({index: game.memCardsList[index]});
                           });
-                          if (_game.pairCheck.length == 2) {
-                            if (_game.pairCheck[0].values.first ==
-                                _game.pairCheck[1].values.first) {
-                              //print("true");
+                          if (game.pairCheck.length == 2) {
+                            if (game.pairCheck[0].values.first ==
+                                game.pairCheck[1].values.first) {
                               pairsFound += 1;
-                              _game.pairCheck.clear();
+                              game.pairCheck.clear();
                               if (pairsFound == 8) {
-                                _game.initGame();
+                                game.initGame();
                                 pairsFound = 0;
                                 turns = 0;
                               }
                             } else {
-                              //print("false");
-
                               Future.delayed(Duration(milliseconds: 250), () {
                                 setState(() {
-                                  _game.cardImgList![_game.pairCheck[0].keys
-                                      .first] = _game.questionCardPath;
-                                  _game.cardImgList![_game.pairCheck[1].keys
-                                      .first] = _game.questionCardPath;
-                                  _game.pairCheck.clear();
+                                  game.cardImgList![game.pairCheck[0].keys
+                                      .first] = game.questionCardPath;
+                                  game.cardImgList![game.pairCheck[1].keys
+                                      .first] = game.questionCardPath;
+                                  game.pairCheck.clear();
                                 });
                               });
                             }
@@ -118,7 +112,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             color: Color(0xFF99B2DD),
                             borderRadius: BorderRadius.circular(12.0),
                             image: DecorationImage(
-                              image: AssetImage(_game.cardImgList![index]),
+                              image: AssetImage(game.cardImgList![index]),
                               fit: BoxFit.cover,
                             ),
                           ),
