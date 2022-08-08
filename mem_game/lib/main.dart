@@ -88,7 +88,8 @@ class _HomeScreenState extends State<HomeScreen> {
                             int secondCard = game.selectedCards.elementAt(1);
 
                             if (game.cardPaths[firstCard] ==
-                                game.cardPaths[secondCard]) {
+                                    game.cardPaths[secondCard] &&
+                                firstCard != secondCard) {
                               // The two cards match!
 
                               game.isCardFlipped[firstCard] = true;

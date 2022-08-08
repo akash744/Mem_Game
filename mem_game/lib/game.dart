@@ -24,7 +24,7 @@ class Game {
     "assets/images/popcorn.png",
   ];
 
-  Set<int> selectedCards = {};
+  List<int> selectedCards = [];
 
   void initGame() {
     isCardFlipped = List.filled(16, false);
