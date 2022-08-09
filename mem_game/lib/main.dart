@@ -59,8 +59,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
           Expanded(
-            child: Align(
-              alignment: Alignment.center,
+            child: Center(
               child: AspectRatio(
                 aspectRatio: 9 / 10,
                 child: GridView.builder(
