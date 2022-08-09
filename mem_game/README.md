@@ -30,11 +30,41 @@ Grab the asset files from https://drive.google.com/file/d/1A8aFJsWLo_SidCiF1_2n1
     - assets/images/
 ```
 
+##### Code for custom Card
+
+```dart
+          Text(
+            title,
+            style: const TextStyle(
+              fontSize: 18.0,
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+            ),
+          ),
+          const SizedBox(
+            height: 5.0,
+          ),
+          Text(
+            value,
+            style: const TextStyle(
+              fontSize: 50.0,
+              fontWeight: FontWeight.w900,
+              color: Colors.white,
+            ),
+          ),
+
+
+
+```
+
 
 ##### Code for Game Class
 
 ```dart
-  List<String> memCardsList = [
+
+    String questionCardPath = "assets/images/hidden.png";
+
+    List<String> cardPaths = [
     "assets/images/beer.png",
     "assets/images/beer.png",
     "assets/images/burger.png",
@@ -52,5 +82,6 @@ Grab the asset files from https://drive.google.com/file/d/1A8aFJsWLo_SidCiF1_2n1
     "assets/images/popcorn.png",
     "assets/images/popcorn.png",
   ];
+
 ```
 

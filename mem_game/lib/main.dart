@@ -43,8 +43,6 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       backgroundColor: Color(0xFF3A405A),
       body: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           const SizedBox(
             height: 30,
@@ -137,8 +135,8 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            crossAxisAlignment: CrossAxisAlignment.center,
+            //mainAxisAlignment: MainAxisAlignment.spaceAround,
+            //crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               CustomCard("Turns", "$turns"),
               CustomCard("Pairs Found", "$pairsFound"),
