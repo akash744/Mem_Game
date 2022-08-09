@@ -4,7 +4,6 @@ Widget customCard(String title, String value) {
   return Expanded(
     child: Container(
       margin: const EdgeInsets.all(15.0),
-      color: const Color(0xFF3A405A),
       child: Column(
         children: [
           Text(

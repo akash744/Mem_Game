@@ -52,9 +52,6 @@ Grab the asset files from https://drive.google.com/file/d/1A8aFJsWLo_SidCiF1_2n1
               color: Colors.white,
             ),
           ),
-
-
-
 ```
 
 
@@ -84,4 +81,17 @@ Grab the asset files from https://drive.google.com/file/d/1A8aFJsWLo_SidCiF1_2n1
   ];
 
 ```
+
+##### Background Colour for Scaffold
+
+```dart
+const Color(0xFF3A405A),
+```
+
+##### Background Colour for Tile Cards
+
+```dart
+const Color(0xFF99B2DD),
+```
+
 
