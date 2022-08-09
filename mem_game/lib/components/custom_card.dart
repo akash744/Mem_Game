@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-Widget CustomCard(String title, String value) {
+Widget customCard(String title, String value) {
   return Expanded(
     child: Container(
-      margin: EdgeInsets.all(15.0),
-      color: Color(0xFF3A405A),
+      margin: const EdgeInsets.all(15.0),
+      color: const Color(0xFF3A405A),
       child: Column(
         children: [
           Text(

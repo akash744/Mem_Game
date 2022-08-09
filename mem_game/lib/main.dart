@@ -41,7 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF3A405A),
+      backgroundColor: const Color(0xFF3A405A),
       body: Column(
         children: <Widget>[
           const SizedBox(
@@ -71,7 +71,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       crossAxisSpacing: 16.0,
                       mainAxisSpacing: 16.0,
                     ),
-                    padding: EdgeInsets.all(16.0),
+                    padding: const EdgeInsets.all(16.0),
                     itemBuilder: (context, index) {
                       return GestureDetector(
                         onTap: () {
@@ -112,9 +112,9 @@ class _HomeScreenState extends State<HomeScreen> {
                           }
                         },
                         child: Container(
-                          padding: EdgeInsets.all(16.0),
+                          padding: const EdgeInsets.all(16.0),
                           decoration: BoxDecoration(
-                            color: Color(0xFF99B2DD),
+                            color: const Color(0xFF99B2DD),
                             borderRadius: BorderRadius.circular(12.0),
                             image: DecorationImage(
                               image: AssetImage((() {
@@ -138,8 +138,8 @@ class _HomeScreenState extends State<HomeScreen> {
             //mainAxisAlignment: MainAxisAlignment.spaceAround,
             //crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              CustomCard("Turns", "$turns"),
-              CustomCard("Pairs Found", "$pairsFound"),
+              customCard("Turns", "$turns"),
+              customCard("Pairs Found", "$pairsFound"),
             ],
           ),
         ],
